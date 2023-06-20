@@ -98,8 +98,8 @@ def get_category_amortisations():
 
 
 def add_expenditure(budget, category, expense):
-    category_split = category.split(':')
-    if category_split[0] in budget:
+    category_split = category.strip().split(':')
+    if len(category_split) > 1 and category_split[0] in budget:
         budget[category_split[0]]['expenditure'] += expense
     if category in budget:
         budget[category]['expenditure'] += expense
