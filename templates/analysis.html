@@ -1,0 +1,15 @@
+<!-- analysis.html -->
+<html>
+    <head>
+        <title>Analysis</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">  <!-- Add your CSS file here -->
+    </head>
+<body>
+    <h1>Analysis Result</h1>
+    <h2>Bar Chart</h2>
+    <img src="{{ chart_path }}" alt="Bar Chart">
+    <br><br>
+    <h2>Table</h2>
+    {{ table_html|safe }}
+</body>
+</html>
